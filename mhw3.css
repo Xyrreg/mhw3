@@ -1,0 +1,298 @@
+body {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "AR One Sans";
+    margin: 0;
+
+    padding-top: 50px;
+    padding-left: 70px;
+}
+
+.Logo {
+    height: 30px;
+}
+
+.ReducedLogo {
+    height: 30px;
+    display: none;
+}
+
+/*Main Nav*/
+.MainNav {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+}
+
+div.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    margin: 10px 20px;
+}
+
+/*End Flex Section*/
+.button {
+    /*Change cursor style*/
+    cursor: pointer;
+}
+
+.SubmitArea {
+    height: 100%;
+}
+
+#Submit {
+    margin-top: 10px;
+
+    color: black;
+    background-color: lightgreen;
+    width: 125px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: lightgreen;
+}
+
+/*End Main Nav*/
+
+.item:hover #SubmitMenu{
+    display: flex;
+}
+
+#SubmitMenu {
+    position: fixed;
+    z-index: 1;
+    right: 0px;
+    top: 51px;
+
+    height: 292px;
+    display: none;
+
+    background-color: black;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#SubmitMenuLeft {
+    width: 250px;
+    height: 100%;
+    border-right: 1px solid gray;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: normal;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+#SubmitMenu:hover #SubmitMenuLeft{
+    display: flex;
+}
+#SubmitMenuLeft img {
+    width: 150px;
+}
+#SubmitMenuLeft div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#SubmitMenuRight {
+    width: 162.5px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SubItem {
+    width: 100%;
+    color: white;
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.SubItem:hover {
+    background-color: rgba(22,26,31,255);
+}
+
+/*Side Nav*/
+.SideNav {
+    position: fixed;
+    top: 51px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: black;
+}
+.Extended {
+    width: 300px;
+}
+
+span {
+    padding-left: 20px;
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+
+    display: none;
+}
+.display {
+    display: inline;
+}
+
+.SideNav a {
+    width: calc(100% - 20px);
+    margin: 0px;
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    display: block;
+}
+.SideNav a:hover {
+    background-color: rgba(22,26,31,255);
+}
+.selected {
+    background-color: rgba(33,39,43,255);
+}
+
+/*End Side Nav*/
+
+header {
+    color: white;
+    background-color: rgba(22,26,31,255);
+    font-size: x-large;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-around;
+    
+    flex-wrap: wrap;
+    /*If items are too large to be displayed all in one line,
+    they will wrap onto another line*/
+}
+
+/*Img*/
+.Element {
+    position: relative;
+    margin: 10px 0px;
+}
+
+a.Element:hover .Info {
+    display: block;
+}
+
+.Info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    display: none;
+}
+
+.Img {
+    height: 350px;
+}
+
+.Icon {
+    height: 25px;
+    width: 25px;
+}
+
+.User {
+    font-weight: normal;
+}
+
+.User, .Title {
+    font-size: 1rem;
+}
+
+/*End Img*/
+
+footer {
+    padding: 50px;
+    background-color: gray;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    /*If items are too large to be displayed all in one line,
+    they will wrap onto another line*/
+}
+
+.Footer {
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 25px;
+
+    font-size: 1rem;
+}
+
+/*Responsiveness*/
+
+@media(max-width: 1000px) {
+    .Logo {
+        display: none;
+    }
+
+    .ReducedLogo {
+        display: inline;
+    }
+}
+
+@media(max-width: 900px) {
+    #Shop {
+        display: none;
+    }
+}
+
+@media(max-width: 800px) {
+    #J_LI {
+        display: none;
+        /*On mobile you can Log In or Join trought the Icon Account Button*/
+    }
+
+}
